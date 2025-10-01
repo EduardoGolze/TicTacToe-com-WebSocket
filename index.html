@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha Multiplayer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Velha Multiplayer</h1>
+        
+        <div class="connection-status disconnected" id="connectionStatus">
+            Desconectado do servidor
+        </div>
+        
+        <div class="player-list" id="playerList">
+            Jogadores online: 0
+        </div>
+        
+        <div class="status" id="gameStatus">
+            Aguardando jogadores...
+        </div>
+        
+        <div class="players-info">
+            <div class="player" id="playerX">
+                <div>Jogador X</div>
+                <div class="player-x">X</div>
+                <div id="playerXName">Aguardando...</div>
+            </div>
+            <div class="player" id="playerO">
+                <div>Jogador O</div>
+                <div class="player-o">O</div>
+                <div id="playerOName">Aguardando...</div>
+            </div>
+        </div>
+        
+        <div class="game-board" id="gameBoard">
+            <!-- As células serão geradas via JavaScript -->
+        </div>
+        
+        <div class="controls">
+            <button id="joinButton" onclick="joinGame()">Participar</button>
+            <button id="resetButton" onclick="resetGame()" disabled>Nova Partida</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
